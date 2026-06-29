@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secret Notes</title>
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <script src="./JS/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div><span>Secret Notes</span></div>
+      <nav>
+        <ul class="navbarBtns-container">
+          <li class="navbarBtns" id="functionsBtn">Funkcje</li>
+          <li class="navbarBtns" id="priceListBtn">Cennik</li>
+          <li class="navbarBtns" id="loginBtn">Zaloguj się</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Twoje notatki,<span class="purple"> w pełni prywatne</span></h1>
+          <h3>
+            Zapisuj myśli, hasła i tajemnice. Szyfrowane, bezpieczne, dostępne
+            tylko dla Ciebie.
+          </h3>
+        </div>
+        <div class="heroBtns-container">
+          <button class="heroBtns">Zacznij za darmo</button>
+          <button class="heroBtns">Zobacz jak działa</button>
+        </div>
+        <div class="appScreenIMG-container">
+          <img class="appScreenIMG" src="/frontend/IMG/appScreen.png" />
+        </div>
+      </section>
+      <!-- FUNCTIONS -->
+      <section class="functions" id="functions">
+        <div class="functions-header">
+          <h3>FUNKCJE</h3>
+          <h2>Wszystko czego potrzebujesz</h2>
+          <h3>Zaprojektowane z myślą o prywatności i prostocie.</h3>
+        </div>
+        <div class="functionsCards-container">
+          <!-- CARD1 -->
+          <div class="functions-cards">
+            <div class="functionsCardsIMG-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="26px"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+                />
+              </svg>
+            </div>
+            <div class="functionsCards-text">
+              <h2>Notatki prywante</h2>
+              <p>
+                Zablokuj wybrane notatki PINem. Treść niewidoczna bez
+                odblokowania.
+              </p>
+            </div>
+          </div>
+          <!-- CARD2 -->
+          <div class="functions-cards">
+            <div class="functionsCardsIMG-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="26px"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 6h.008v.008H6V6Z"
+                />
+              </svg>
+            </div>
+            <div class="functionsCards-text">
+              <h2>Tagi i kategorie</h2>
+              <p>
+                Organizuj notatki tagami. Filtruj po kategoriach jednym
+                kliknięciem.
+              </p>
+            </div>
+          </div>
+          <!-- CARD3 -->
+          <div class="functions-cards">
+            <div class="functionsCardsIMG-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="26px"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </div>
+            <div class="functionsCards-text">
+              <h2>Szybkie wyszukiwanie</h2>
+              <p>
+                Znajdź każdą notatkę w ułamku sekundy. Pełnotekstowe
+                przeszukiwanie.
+              </p>
+            </div>
+          </div>
+          <!-- CARD4 -->
+          <div class="functions-cards">
+            <div class="functionsCardsIMG-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="26px"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                />
+              </svg>
+            </div>
+            <div class="functionsCards-text">
+              <h2>Dostęp z każdego miejsca</h2>
+              <p>
+                Przeglądarka, telefon, tablet — Twoje notatki zawsze pod ręką.
+              </p>
+            </div>
+          </div>
+          <!-- CARD5 -->
+          <div class="functions-cards">
+            <div class="functionsCardsIMG-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="26px"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                />
+              </svg>
+            </div>
+            <div class="functionsCards-text">
+              <h2>Ulubione</h2>
+              <p>Przypinaj najważniejsze notatki. Zawsze na wierzchu listy.</p>
+            </div>
+          </div>
+          <!-- CARD6 -->
+          <div class="functions-cards">
+            <div class="functionsCardsIMG-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="26px"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z"
+                />
+              </svg>
+            </div>
+            <div class="functionsCards-text">
+              <h2>Synchronizacja</h2>
+              <p>
+                MongoDB w chmurze. Dane zapisane natychmiast, dostępne wszędzie.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- HOW IT WORKS -->
+      <section class="howItWorks">
+        <div class="howItWorks-header">
+          <h3>Jak to działa</h3>
+          <h2>Trzy kroki do prywatności</h2>
+          <h3>Zacznij w mniej niż minutę.</h3>
+        </div>
+        <div class="howItWorksCards-container">
+          <div class="howItWorks-cards">
+            <div><span class="howItWorks-numbers">1</span></div>
+            <div><h3 class="primary">Zarejestruj się</h3></div>
+            <div><h3>Email i hasło. Zero zbędnych danych osobowych.</h3></div>
+          </div>
+          <div class="howItWorks-cards">
+            <div><span class="howItWorks-numbers">2</span></div>
+            <div><h3 class="primary">Utwórz notatkę</h3></div>
+            <div>
+              <h3>Pisz, taguj, oznaczaj jako prywatne — to Twój wybór.</h3>
+            </div>
+          </div>
+          <div class="howItWorks-cards">
+            <div><span class="howItWorks-numbers">3</span></div>
+            <div><h3 class="primary">Miej spokój</h3></div>
+            <div>
+              <h3>Notatki bezpieczne, zsynchronizowane i zawsze dostępne.</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PRICE LIST -->
+      <section class="priceList" id="priceList">
+        <div class="priceList-header">
+          <h3>CENNIK</h3>
+          <h2>Prosty Cennik</h2>
+          <h3>Zacznij za darmo, rozszerz kiedy chcesz.</h3>
+        </div>
+        <div class="priceListCards-container">
+          <div class="priceList-cards">
+            <div class="priceListCards-header">
+              <span class="priceListCards-subtitle">Free</span>
+              <div>
+                <span class="priceListCards-priceTag">0 zł</span>
+                <span class="priceListCards-perMonthTxt"> / miesiąc</span>
+              </div>
+              <span class="priceListCards-text">Idealne na start.</span>
+            </div>
+            <ul class="priceListCards-ul">
+              <li class="priceListCards-li">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="26"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span>Do 50 notatek</span>
+              </li>
+              <li class="priceListCards-li">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="26"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span>Tagi i kategorie</span>
+              </li>
+              <li class="priceListCards-li">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="26"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span>Notatki prywatne</span>
+              </li>
+            </ul>
+            <div class="priceListCardsBtns-container">
+              <button class="priceListCardsBtns">Zacznij za darmo</button>
+            </div>
+          </div>
+          <div class="priceList-cards" id="card-pro">
+            <div class="priceListCards-header">
+              <span class="priceListCards-subtitle">Pro</span>
+              <div>
+                <span class="priceListCards-priceTag">19 zł</span>
+                <span class="priceListCards-perMonthTxt"> / miesiąc</span>
+              </div>
+              <span class="priceListCards-text">Idealne na start.</span>
+            </div>
+            <ul class="priceListCards-ul">
+              <li class="priceListCards-li">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="26"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span>Nieograniczone notatki</span>
+              </li>
+              <li class="priceListCards-li">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="26"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span>Eksport PDF / Markdown</span>
+              </li>
+              <li class="priceListCards-li">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="26"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span>Historia wersji</span>
+              </li>
+              <li class="priceListCards-li">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="26"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span>Priorytetowe wsparcie</span>
+              </li>
+            </ul>
+            <div class="priceListCardsBtns-container">
+              <button class="priceListCardsBtns" id="button-pro">
+                Wybierz pro
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="copyrights-container">
+        <span class="copyrights">
+          © 2025 Secret Notes. Wszelkie prawa zastrzeżone.</span
+        >
+      </div>
+      <div>
+        <ul class="footer-ul">
+          <li class="footer-li">Prywatność</li>
+          <li class="footer-li">Regulamin</li>
+          <li class="footer-li">Kontakt</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

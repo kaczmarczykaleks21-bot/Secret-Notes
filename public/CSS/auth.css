@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* --- Tytuły --- */
+  --text-hero: clamp(28px, 4vw, 36px); /* h1 na hero */
+  --text-h2: clamp(18px, 2.5vw, 22px); /* tytuły sekcji */
+  --text-h3: clamp(14px, 1.8vw, 16px); /* tytuły kart, plan name */
+
+  /* --- UI --- */
+  --text-body: clamp(13px, 1.4vw, 15px); /* hero-sub, feat-desc, plan-desc */
+  --text-ui: clamp(12px, 1.2vw, 14px); /* przyciski, nav-link, plan-btn */
+  --text-small: clamp(11px, 1vw, 13px); /* daty, tagi, step-desc, badges */
+  --text-label: 
+
+  /* FONTS */ --font-main: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* BACKGROUND */
+  --sn-bg-app: #0f0f0f;
+  --sn-bg-surface: #141414;
+  --sn-bg-element: #1a1a1a;
+  --sn-bg-hover: #1e1e1e;
+  --sn-bg-active: #252525;
+
+  /* BORDER */
+  --sn-border-subtle: #1e1e1e;
+  --sn-border-default: #222;
+  --sn-border-strong: #2a2a2a;
+  --sn-border-emphasis: #333;
+  --sn-border-highlight: #3a3a3a;
+
+  /* TEXT */
+  --sn-text-primary: #e8e8e8;
+  --sn-text-secondary: #ccc;
+  --sn-text-muted: #aaa;
+  --sn-text-dim: #888;
+  --sn-text-faint: #666;
+  --sn-text-ghost: #555;
+  --sn-text-placeholder: #444;
+
+  /* TAGS */
+  --sn-tag-work-bg: #1a2520;
+  --sn-tag-work-text: #4a9e7a;
+
+  --sn-tag-personal-bg: #1a1a2e;
+  --sn-tag-personal-text: #6673c7;
+
+  --sn-tag-ideas-bg: #231e13;
+  --sn-tag-ideas-text: #c49a3a;
+
+  --sn-tag-private-bg: #221515;
+  --sn-tag-private-text: #b85555;
+
+  /* ACCENTS */
+  --sn-accent-purple: #6673c7;
+  --sn-accent-purple-bg: #1a1a2e;
+  --sn-accent-card-highlight: #2d2d40;
+
+  color-scheme: dark;
+
+  --font-main: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Tła */
+  --sn-bg-app: #0f0f0f;
+  --sn-bg-surface: #141414;
+  --sn-bg-element: #1a1a1a;
+  --sn-bg-hover: #1e1e1e;
+  --sn-bg-active: #252525;
+
+  /* Obramowania */
+  --sn-border-subtle: #1e1e1e;
+  --sn-border-default: #222;
+  --sn-border-strong: #2a2a2a;
+  --sn-border-emphasis: #333;
+  --sn-border-highlight: #3a3a3a;
+
+  /* Tekst */
+  --sn-text-primary: #e8e8e8;
+  --sn-text-secondary: #ccc;
+  --sn-text-muted: #aaa;
+  --sn-text-dim: #888;
+  --sn-text-faint: #666;
+  --sn-text-ghost: #555;
+  --sn-text-placeholder: #444;
+
+  /* Tagi */
+  --sn-tag-work-bg: #1a2520;
+  --sn-tag-work-text: #4a9e7a;
+  --sn-tag-personal-bg: #1a1a2e;
+  --sn-tag-personal-text: #6673c7;
+  --sn-tag-ideas-bg: #231e13;
+  --sn-tag-ideas-text: #c49a3a;
+  --sn-tag-private-bg: #221515;
+  --sn-tag-private-text: #b85555;
+
+  /* Akcenty */
+  --sn-accent: #6673c7;
+  --sn-accent-bg: #1a1a2e;
+  --sn-accent-border: #2d2d50;
+  --sn-accent-hover: #2d2d40;
+  --sn-accent-text: #a0a8e8;
+
+  /* Border radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* --- Tytuły --- */
+  --text-hero: clamp(28px, 4vw, 36px); /* h1 na hero */
+  --text-h2: clamp(18px, 2.5vw, 22px); /* tytuły sekcji */
+  --text-h3: clamp(14px, 1.8vw, 16px); /* tytuły kart, plan name */
+
+  /* --- UI --- */
+  --text-body: clamp(13px, 1.4vw, 15px); /* hero-sub, feat-desc, plan-desc */
+  --text-ui: clamp(20px, 1.2vw, 30px); /* przyciski, nav-link, plan-btn */
+  --text-small: clamp(11px, 1vw, 13px); /* daty, tagi, step-desc, badges */
+  --text-label:                                                                                                                                                                                                  
+;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background: var(--sn-bg-app);
+  color: var(--sn-text-primary);
+  font-family: var(--font-main);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0f0f0f;
+  color: #e8e8e8;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--sn-bg-app);
+  color: var(--sn-text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: var(--text-hero);
+  color: var(--sn-text-primary);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: var(--text-h2);
+  color: var(--sn-text-primary);
+  font-weight: 900;
+}
+
+h3 {
+  font-size: var(--text-h3);
+  color: var(--sn-text-faint);
+  font-weight: 900;
+}
+
+p {
+  font-size: var(--text-small);
+  color: var(--sn-text-faint);
+  font-weight: 900;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+label,
+input,
+button {
+  font-size: var(--text-ui);
+}
+
+svg {
+  color: var(--sn-text-primary);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  min-height: 100vh;
+}
+
+.main-container {
+  background-color: var(--sn-bg-element);
+  border: 2px solid var(--sn-border-strong);
+  border-radius: 30px;
+  padding-top: 60px;
+  padding-bottom: 90px;
+  padding-right: 80px;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3.5em;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.icon-container {
+  background-color: var(--sn-bg-element);
+  border: 2px solid var(--sn-border-highlight);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.icon-container svg {
+  color: var(--sn-border-highlight);
+  transition: all 0.3s ease;
+}
+
+.home,
+.brandLabel {
+  transition: all 0.3s ease;
+}
+
+.home:hover {
+  cursor: pointer;
+}
+
+.home:hover .brandLabel,
+.home:hover .icon-container svg {
+  color: var(--sn-accent-purple);
+}
+
+.home:hover .icon-container {
+  background-color: var(--sn-accent-bg);
+  border: 2px solid var(--sn-accent-border);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3em;
+  width: 100%;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
+  width: 100%;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1em;
+  width: 100%;
+}
+
+.inputsContainer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 0.4em;
+}
+
+.input-containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.3em;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  background-color: var(--sn-bg-active);
+  border: 2px solid var(--sn-border-highlight);
+  border-radius: 10px;
+  padding: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.footer-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.authBtns-containers {
+  width: 100%;
+}
+
+.authBtns {
+  width: 100%;
+  background-color: var(--sn-bg-element);
+  border: 2px solid var(--sn-border-strong);
+  border-radius: 10px;
+  padding: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.authBtns:hover {
+  cursor: pointer;
+  background-color: var(--sn-bg-hover);
+  border: 2px solid var(--sn-border-strong);
+}
+
+.footer-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.footerText {
+  text-align: center;
+}
+
+a {
+  transition: all 0.3s ease;
+  color: var(--sn-text-secondary);
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--sn-accent-text);
+}

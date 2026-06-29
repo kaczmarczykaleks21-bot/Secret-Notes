@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="../CSS/auth.css" />
+    <script src="../JS/auth.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <div class="header">
+          <h2 class="home" id="homeBtn">
+            <span class="icon-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="22"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+                />
+              </svg>
+            </span>
+            <span class="brandLabel">Secret Notes</span>
+          </h2>
+          <h3>Twoje prywatne notatki, zaszyfrowane.</h3>
+        </div>
+        <form class="login-form">
+          <div class="inputs-container">
+            <div class="input-containers">
+              <label for="email">Email</label>
+              <input
+                type="text"
+                name="email"
+                placeholder="ty@example.com"
+                minlength="8"
+                required
+              />
+            </div>
+            <div class="input-containers">
+              <label for="password">Hasło</label>
+              <input
+                type="text"
+                name="password"
+                placeholder="••••••••"
+                minlength="8"
+                required
+              />
+            </div>
+          </div>
+          <div class="footer-container">
+            <div class="authBtns-containers">
+              <button class="authBtns" type="submit">Zaloguj się</button>
+            </div>
+            <div class="footer-nav">
+              <h3 class="footerText">lub</h3>
+              <h3 class="footerText">
+                Nie masz konta? <a href="./signup.html">Zarejestruj się</a>
+              </h3>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
