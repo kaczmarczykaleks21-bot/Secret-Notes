@@ -6,13 +6,13 @@ const functionsBtn = document.getElementById('functionsBtn');
 
 // NAVIGATION --INSIDE INDEX.HTML--
 priceListBtn.addEventListener('click', () => {
-  window.location.href = '/frontend/#priceList';
+  window.location.href = '/secretnotes/#priceList';
 });
 functionsBtn.addEventListener('click', () => {
-  window.location.href = '/frontend/#functions';
+  window.location.href = '/secretnotes/#functions';
 });
 
 // NAVIGATION --GO TO LOGIN--
 loginBtn.addEventListener('click', () => {
-  window.location.href = '/frontend/HTML/login.html';
+  window.location.href = '/secretnotes/auth/signup';
 });
