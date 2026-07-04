@@ -5,7 +5,9 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.7.3"
+    "mongoose": "^9.7.3",
+    "slugify": "^1.6.9",
+    "validator": "^13.15.35"
   },
   "name": "secret-notes",
   "version": "1.0.0",

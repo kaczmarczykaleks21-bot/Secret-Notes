@@ -1,4 +1,4 @@
-const mongoose = requrie('mongoose');
+const mongoose = require('mongoose');
 
 const noteSchema = new mongoose.Schema({
   title: {
@@ -9,10 +9,12 @@ const noteSchema = new mongoose.Schema({
     type: String,
   },
   tags: {
+    type: String,
     enum: ['favourite', 'private', 'no-tags'],
     default: 'no-tags',
   },
   priority: {
+    type: Number,
     enum: [1, 2, 3, 4, 5],
     default: 3,
   },

@@ -1,6 +1,6 @@
 const express = require('express');
 
-const userRouter = require('./routes/user.routes');
+const userRouter = require('./routes/users.routes');
 const notesRouter = require('./routes/notes.routes');
 const pagesRouter = require('./routes/pages.routes');
 const globalErrorHandler = require('./controller/error.controller');
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 app.use('/api/v1/notes', notesRouter);
 app.use('/api/v1/users', userRouter);
 
-app.all('*', (req, res, next) => {
+app.all('/{*splat}', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
 });
 
