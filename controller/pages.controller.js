@@ -1,5 +1,4 @@
 const path = require('path');
-const catchAsync = require('../utils/catchAsync');
 
 exports.landingPage = (req, res, next) => {
   res.sendFile(path.join(__dirname, '../public/HTML/index.html'));
@@ -15,4 +14,8 @@ exports.login = (req, res, next) => {
 
 exports.app = (req, res, next) => {
   res.sendFile(path.join(__dirname, '../public/HTML/app.html'));
+};
+
+exports.notFound = (req, res, next) => {
+  res.sendFile(path.join(__dirname, '../public/HTML/404.html'));
 };

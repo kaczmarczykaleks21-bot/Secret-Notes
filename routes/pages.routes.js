@@ -8,7 +8,7 @@ const router = express.Router();
 router.route('/').get(pagesController.landingPage);
 router.route('/app').get(pagesController.app);
 
-router.route('/auth/signup').get(pagesController.signup);
-router.route('/auth/login').get(pagesController.login);
+router.get('/signup', pagesController.signup);
+router.get('/login', pagesController.login);
 
 module.exports = router;

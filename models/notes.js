@@ -5,6 +5,9 @@ const noteSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please provide title!'],
   },
+  description: {
+    type: String,
+  },
   content: {
     type: String,
   },
@@ -21,7 +24,7 @@ const noteSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    required: [true, 'User is reference is required!'],
+    required: [true, 'User reference is required!'],
   },
 });
 
