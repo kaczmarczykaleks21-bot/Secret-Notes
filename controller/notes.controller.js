@@ -15,7 +15,7 @@ exports.getAllNotes = catchAsync(async (req, res, next) => {
 });
 
 exports.getNoteById = catchAsync(async (req, res, next) => {
-  const id = await req.params.id;
+  const id = req.params.id;
   const note = await Note.findById(id);
 
   res.status(200).json({
@@ -38,7 +38,7 @@ exports.createNote = catchAsync(async (req, res, next) => {
 });
 
 exports.updateNote = catchAsync(async (req, res, next) => {
-  const id = await req.params.id;
+  const id = req.params.id;
   const note = await Note.findByIdAndUpdate(id, req.body, {
     new: true,
     runValidators: true,
@@ -52,7 +52,7 @@ exports.updateNote = catchAsync(async (req, res, next) => {
 });
 
 exports.deleteNote = catchAsync(async (req, res, next) => {
-  const id = await req.params.id;
+  const id = req.params.id;
   const deleteNote = await Note.findByIdAndDelete(id);
 
   res.status(204).json({
