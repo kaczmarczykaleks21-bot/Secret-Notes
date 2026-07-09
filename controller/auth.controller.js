@@ -39,7 +39,7 @@ exports.login = catchAsync(async (req, res, next) => {
   // Check if user exists && password is correct
   const user = await User.findOne({ email }).select('+password');
 
-  if (!user || !(await User.correctPassword(password, user.password))) {
+  if (!user || !(await user.correctPassword(password, user.password))) {
     return next(new AppError('Incorrect email or password!', 401));
   }
 
@@ -67,7 +67,7 @@ exports.protect = catchAsync(async (req, res, next) => {
     );
   }
   // 2) Token Verification
-  const decoded = await promisify(jwt.verify(token, process.env.JWT_SECRET));
+  const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
   console.log(decoded);
   // 3) Check if user still exists
   const freshUser = await User.findById(decoded.id);
@@ -90,3 +90,14 @@ exports.protect = catchAsync(async (req, res, next) => {
   req.user = freshUser;
   next();
 });
+
+exports.restrictTo = (...roles) => {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.roles)) {
+      return next(
+        new AppError('You do not have permission to perform this action', 403),
+      );
+    }
+    next();
+  };
+};

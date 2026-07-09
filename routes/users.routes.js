@@ -6,14 +6,34 @@ const router = express.Router();
 
 router
   .route('/')
-  .get(userController.getAllUsers)
-  .post(userController.createUser);
+  .get(
+    authController.protect,
+    authController.restrictTo('admin'),
+    userController.getAllUsers,
+  )
+  .post(
+    authController.protect,
+    authController.restrictTo('admin'),
+    userController.createUser,
+  );
 
 router
   .route('/:id')
-  .get(userController.getUserById)
-  .patch(userController.updateUser)
-  .delete(userController.deleteUser);
+  .get(
+    authController.protect,
+    authController.restrictTo('admin'),
+    userController.getUserById,
+  )
+  .patch(
+    authController.protect,
+    authController.restrictTo('admin'),
+    userController.updateUser,
+  )
+  .delete(
+    authController.protect,
+    authController.restrictTo('admin'),
+    userController.deleteUser,
+  );
 
 router.route('/signup').post(authController.signup);
 router.route('/login').post(authController.login);
