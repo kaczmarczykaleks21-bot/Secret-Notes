@@ -6,13 +6,13 @@ const router = express.Router();
 
 router
   .route('/')
-  .get(notesController.getAllNotes)
-  .post(notesController.createNote);
+  .get(authController.protect, notesController.getAllNotes)
+  .post(authController.protect, notesController.createNote);
 
 router
   .route('/:id')
-  .get(notesController.getNoteById)
-  .patch(notesController.updateNote)
-  .delete(notesController.deleteNote);
+  .get(authController.protect, notesController.getNoteById)
+  .patch(authController.protect, notesController.updateNote)
+  .delete(authController.protect, notesController.deleteNote);
 
 module.exports = router;
