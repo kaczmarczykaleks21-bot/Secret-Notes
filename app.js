@@ -1,4 +1,7 @@
 const express = require('express');
+const rateLimit = require('express-rate-limit');
+const cookieParser = require('cookie-parser');
+const helmet = require('helmet');
 
 const usersRouter = require('./routes/users.routes');
 const notesRouter = require('./routes/notes.routes');
@@ -8,7 +11,36 @@ const AppError = require('./utils/appError');
 
 const app = express();
 
-app.use(express.json());
+// Set security headers
+app.use(helmet());
+
+//  Limit number of requests from same api
+const globalLimiter = rateLimit({
+  max: 300,
+  windowMs: 60 * 60 * 1000,
+  message: 'Too many requests from this IP, Please try again in an hour!',
+});
+
+const authLimiter = rateLimit({
+  max: 10,
+  windowMs: 60 * 60 * 1000,
+  message: 'Too many requests from this IP, Please try again in an hour!',
+});
+
+app.use('/api', globalLimiter);
+app.use('/api/v1/users/signup', authLimiter);
+app.use('/api/v1/users/login', authLimiter);
+
+// Cookies
+app.use(cookieParser());
+
+// Body parser => reading data from the body into req.body
+app.use(
+  express.json({
+    limit: '10kb',
+  }),
+);
+// Serving static files
 app.use(express.static(`${__dirname}/public`));
 
 // Routes

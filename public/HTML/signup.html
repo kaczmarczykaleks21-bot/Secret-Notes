@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signup</title>
     <link rel="stylesheet" href="/CSS/auth.css" />
-    <script src="/JS/auth.js" defer></script>
+    <script src="/JS/auth/signup.js" type="module"></script>
   </head>
   <body>
+    <div class="alertBanner" id="alertBanner">
+      <div class="alert-container">
+        <div class="alert-iconContainer">
+          <span id="alertIcon">&#10004;</span>
+        </div>
+        <div class="alert-textContainer">
+          <h3 id="alert-title">ALERT TITLE</h3>
+          <p id="alert-desciption">ALERT DESCRIPTION</p>
+          <div class="alert-progress" id="progress"></div>
+        </div>
+        <div class="alert-closeContainer">
+          <span class="x" id="closeAlertBtn">&times;</span>
+        </div>
+      </div>
+    </div>
     <main>
       <div class="main-container">
         <div class="header">
@@ -36,35 +51,48 @@
           <div class="inputsContainer-grid">
             <div class="input-containers">
               <label for="nick">Nazwa</label>
-              <input type="text" name="nick" placeholder="Jan123" required />
+              <input
+                id="signup-username"
+                type="text"
+                name="nick"
+                placeholder="Jan123"
+                required
+              />
+              <span class="alert-span" id="usernameErrorText"></span>
             </div>
             <div class="input-containers">
               <label for="email">Email</label>
               <input
-                type="text"
+                id="signup-email"
+                type="email"
                 name="email"
                 placeholder="ty@example.com"
                 required
               />
+              <span class="alert-span" id="emailErrorText"></span>
             </div>
           </div>
           <div class="input-containers">
             <label for="password">Hasło</label>
             <input
-              type="text"
+              id="signup-password"
+              type="password"
               name="password"
               placeholder="••••••••"
               required
             />
+            <span class="alert-span" id="passwordErrorText"></span>
           </div>
           <div class="input-containers">
             <label for="password">Potwierdź hasło</label>
             <input
-              type="text"
+              id="signup-passwordConfirm"
+              type="password"
               name="password"
               placeholder="••••••••"
               required
             />
+            <span class="alert-span" id="passwordConfirmErrorText"></span>
           </div>
           <div class="footer-container">
             <div class="authBtns-containers">

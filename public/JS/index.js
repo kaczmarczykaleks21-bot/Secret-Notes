@@ -14,5 +14,5 @@ functionsBtn.addEventListener('click', () => {
 
 // NAVIGATION --GO TO LOGIN--
 loginBtn.addEventListener('click', () => {
-  window.location.href = '/secretnotes/signup';
+  window.location.href = '/secretnotes/login';
 });
